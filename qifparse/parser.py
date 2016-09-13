@@ -201,7 +201,7 @@ class QifParser(object):
                     split.category = cat
             elif line[0] == 'E':
                 split = curItem.splits[-1]
-                split.memo = line[1:-1]
+                split.memo = line[1:]
             elif line[0] == 'A':
                 split = curItem.splits[-1]
                 if not split.address:
@@ -273,7 +273,7 @@ class QifParser(object):
                     split.category = cat
             elif line[0] == 'E':
                 split = curItem.splits[-1]
-                split.memo = line[1:-1]
+                split.memo = line[1:]
             elif line[0] == 'A':
                 split = curItem.splits[-1]
                 if not split.address:
